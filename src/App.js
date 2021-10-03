@@ -1,5 +1,5 @@
 import React from "react";
-import { useSpring } from "react-spring";
+import { useSpring, animated } from "react-spring";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -13,15 +13,13 @@ const App = () => {
     },
   });
 
-  console.log(fade);
-
   return (
-    <div className="App">
+    <animated.div className="App" style={fade}>
       <header className="App-header">
         <img src={logo} className="logo" alt="" />
         <button className="menu-button">Menu</button>
       </header>
-    </div>
+    </animated.div>
   );
 };
 
