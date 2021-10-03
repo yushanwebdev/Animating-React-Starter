@@ -5,7 +5,10 @@ const Toggle = () => {
   const [isToggle, setToggle] = useState(false);
 
   const fade = useSpring({
-    opacity: isToggle ? 1 : 0,
+    // opacity: isToggle ? 1 : 0,
+    color: isToggle ? "tomato" : "green",
+    // fontSize: isToggle ? "2rem" : "5em",
+    transform: isToggle ? "translate3d(0,0,0)" : "translate3d(0, -50px, 0)", // string patterns
   });
 
   return (
