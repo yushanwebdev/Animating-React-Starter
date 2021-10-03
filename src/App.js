@@ -4,14 +4,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 const App = () => {
-  const fade = useSpring({
-    from: {
-      opacity: 0,
-    },
-    to: {
-      opacity: 1,
-    },
-  });
+  const fade = useSpring({ from: { opacity: 0 }, opacity: 1 });
 
   return (
     <animated.div className="App" style={fade}>
