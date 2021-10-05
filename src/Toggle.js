@@ -8,14 +8,19 @@ const Toggle = () => {
     // opacity: isToggle ? 1 : 0,
     // fontSize: isToggle ? "2rem" : "5em",
     color: isToggle ? "tomato" : "green",
-    y: isToggle ? 0 : -50,
+    y: isToggle ? 0 : 1,
   });
 
   return (
     <div>
       <animated.h1
         style={{
-          transform: y.interpolate((y) => `translate3d(0, ${y}px, 0)`),
+          transform: y
+            .interpolate({
+              range: [0, 0.25, 0.5, 0.75, 1],
+              output: [0, -25, -50, -100, -50],
+            })
+            .interpolate((y) => `translate3d(0, ${y}px, 0)`),
           color,
         }}
       >
