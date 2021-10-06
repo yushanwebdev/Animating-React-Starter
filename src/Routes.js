@@ -32,7 +32,7 @@ const Main = () => {
 
   return transitions.map(({ item, key, props: transition }) => (
     <animated.div key={key} style={transition}>
-      <Switch>
+      <Switch location={item}>
         <Route exact path="/" component={One} />
         <Route exact path="/two" component={Two} />
         <Route exact path="/three" component={Three} />
