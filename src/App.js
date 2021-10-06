@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
-import Toggle from "./Toggle";
-// import Nav from "./Nav";
+import Checkout from "./Checkout";
+import Routes from "./Routes";
+
 import logo from "./logo.svg";
 import "./App.css";
-import Checkout from "./Checkout";
 
 const App = () => {
   const [isNavOpen, setNavOpen] = useState(false);
@@ -18,10 +18,9 @@ const App = () => {
         <button className="menu-button" onClick={() => setNavOpen(!isNavOpen)}>
           Menu
         </button>
-        {/* <Nav style={navOpen} /> */}
       </header>
       <main>
-        <Toggle />
+        <Routes />
         <Checkout isOpen={isNavOpen} />
       </main>
     </animated.div>
