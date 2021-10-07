@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
-import Modal from "./Modal";
+import Checkout from "./Checkout";
 
 import logo from "./logo.svg";
 import "./App.css";
@@ -19,7 +19,7 @@ const App = () => {
         </button>
       </header>
       <main>
-        <Modal />
+        <Checkout isOpen={isNavOpen} />
       </main>
     </animated.div>
   );
