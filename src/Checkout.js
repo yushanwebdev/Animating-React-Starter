@@ -4,10 +4,7 @@ import { useSpring, animated, config } from "react-spring";
 const Checkout = ({ isOpen }) => {
   const { x } = useSpring({
     x: isOpen ? 0 : 100,
-    config: {
-      tension: 400,
-      friction: 200,
-    },
+    config: config.gentle,
   });
 
   return (
