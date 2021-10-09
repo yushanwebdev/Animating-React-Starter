@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import Checkout from "./Checkout";
+import Accordion from "./Accordion";
 
 import logo from "./logo.svg";
 import "./App.css";
@@ -19,6 +20,7 @@ const App = () => {
         </button>
       </header>
       <main>
+        <Accordion />
         <Checkout isOpen={isNavOpen} />
       </main>
     </animated.div>
