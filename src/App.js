@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import Checkout from "./Checkout";
 import Accordion from "./Accordion";
-import Waypoints from "./Waypoints";
+import Gesture from "./Gesture";
 
 import logo from "./logo.svg";
 import "./App.css";
@@ -23,7 +23,8 @@ const App = () => {
       <main>
         <Accordion />
         <Checkout isOpen={isNavOpen} />
-        <Waypoints />
+        <Gesture />
+        <div />
       </main>
     </animated.div>
   );
